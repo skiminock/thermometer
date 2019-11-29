@@ -14,6 +14,27 @@
 
 <body>
 
+<script>
+    function test () {
+        const element = document.getElementById('info')
+
+        if (element) {
+            const height = randomBetween(0, 204)
+            element.setAttribute('height', height + 'px')
+            console.log('height', height)
+        }
+    }
+
+    function randomBetween (min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+</script>
+
+<button onclick="test()">
+    UPDATE
+</button>
+
 <div class="block">
 
     <div style="width: 50px; height: 100%;">
@@ -60,12 +81,14 @@
 
                 </clipPath>
             </defs>
-            <g id="sites" clip-path="url(#myClip)">
+
+            <g clip-path="url(#myClip)">
                 <g style="transform: rotate(-180deg) translate(-16px, -204px);" height="100%">
                     <rect class="overlay" fill="#E0E0E0" height="100%" width="16" x="0" y="0"></rect>
-                    <rect class="info" fill="#2BB0ED" height="70" width="16" x="0" y="0"></rect>
+                    <rect class="info" id="info" fill="#2BB0ED" height="70" width="16" x="0" y="0"></rect>
                 </g>
             </g>
+
         </svg>
 
     </div>

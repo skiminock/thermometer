@@ -16,5 +16,5 @@ body, html {
     display: flex;
     flex-flow: row;
     flex: 1 1 auto;
-    height: 208px;
+    height: 204px;
 }
